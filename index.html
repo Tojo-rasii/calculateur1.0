@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div>
+            <article>
+                <label for="">
+                    <p>Nom</p><input type="text" id="name">
+                </label>
+                <label for="">
+                    <p>Budget</p><input type="number" id="budget">
+                </label>
+            </article>
+            <article>
+                <label for="">
+                    <p>Nombre de personne</p><input type="number" id="personne">
+                </label>
+                <label for="">
+                    <p>Nombre du jour</p><input type="number" id="jour">
+                </label>
+            </article>
+            <article>
+                <label for="transport">
+                    <p>Transport</p>
+                    <select name="transport" id="transport">
+                        <option value="40000">Taxi-brousse</option>
+                        <option value="50000">Avion</option>
+                        <option value="30000">Voiture</option>
+                    </select>
+                </label>
+                <label for="transport">
+                    <p>Hebergement</p>
+                    <select name="hebergement" id="hebergement">
+                        <option value="40000">Hotel</option>
+                        <option value="60000">Campaigne</option>
+                    </select>
+                </label>
+            </article>
+            <article>
+                <label for="">
+                    <p>Estimation repas</p><input type="number" id="repas">
+                </label>
+            </article>
+            <article>
+                <button id="calculer">Calculer</button>
+            </article>
+            <!-- RESULTAT -->
+            <article>
+                <h3 id="resultat"></h3>
+            </article>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

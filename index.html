@@ -11,54 +11,137 @@
 <body>
     <main>
         <div>
-            <article>
-                <label for="">
-                    <p>Name</p><input type="text" id="name">
-                </label>
-                <label for="">
-                    <p>Budget</p><input type="number" id="budget">
-                </label>
-            </article>
-            <article>
-                <label for="">
-                    <p>Nombre de personne</p><input type="number" id="personne">
-                </label>
-                <label for="">
-                    <p>Nombre du jour</p><input type="number" id="jour">
-                </label>
-            </article>
-            <article>
-                <label for="transport">
-                    <p>Transport</p>
-                    <select name="transport" id="transport">
-                        <option value="40000">Taxi-brousse</option>
-                        <option value="50000">Avion</option>
-                        <option value="30000">Voiture</option>
-                    </select>
-                </label>
-                <label for="transport">
-                    <p>Hebergement</p>
-                    <select name="hebergement" id="hebergement">
-                        <option value="40000">Hotel</option>
-                        <option value="60000">Campaigne</option>
-                    </select>
-                </label>
-            </article>
-            <article>
-                <label for="">
-                    <p>Estimation repas</p><input type="number" id="repas">
-                </label>
-            </article>
-            <article>
-                <button id="calculer">Calculer</button>
-            </article>
-            <!-- RESULTAT -->
-            <article>
-                <h3 id="resultat"></h3>
-            </article>
+            <fieldset>
+                <legend>
+                    <span><img src="../calculateur/Images/icons8.png" style="border-radius:50%;" alt=""></span>
+                    <span>
+                        <h3>Travel calculator</h3>
+                    </span>
+                    <article>
+                        <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" id="svg"
+                            height="40" viewBox="0,0,256,256">
+                            <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <g transform="scale(2,2)">
+                                    <path
+                                        d="M64,6c-32,0 -58,26 -58,58c0,32 26,58 58,58c32,0 58,-26 58,-58c0,-32 -26,-58 -58,-58zM64,12c28.7,0 52,23.3 52,52c0,28.7 -23.3,52 -52,52c-28.7,0 -52,-23.3 -52,-52c0,-28.7 23.3,-52 52,-52zM64,30c-4.97056,0 -9,4.02944 -9,9c0,4.97056 4.02944,9 9,9c4.97056,0 9,-4.02944 9,-9c0,-4.97056 -4.02944,-9 -9,-9zM64,59c-5,0 -9,4 -9,9v24c0,5 4,9 9,9c5,0 9,-4 9,-9v-24c0,-5 -4,-9 -9,-9z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </article>
+                </legend>
+                <hr>
+                <article>
+                    <label for="">
+                        <span>
+                            <p>Nom</p>
+                        </span>
+                        <span id="input-border">
+                            <ion-icon id="icon" name="person"></ion-icon>
+                            <input type="text" id="name">
+                        </span>
+                    </label>
+                    <label for="">
+                        <span>
+                            <p>Budget</p>
+                        </span>
+                        <span id="input-border">
+                            <ion-icon id="icon" name="logo-euro"></ion-icon>
+                            <input type="number" id="budget">
+                        </span>
+                    </label>
+                </article>
+                <article>
+                    <label for="">
+                        <span>
+                            <p>Nombre de personne</p>
+                        </span>
+                        <span id="input-border">
+                            <ion-icon id="icon" name="people"></ion-icon>
+                            <input type="number" id="personne">
+                        </span>
+                    </label>
+                    <label for="">
+                        <span>
+                            <p>Nombre du jour</p>
+                        </span>
+                        <span id="input-border">
+                            <ion-icon id="icon" name="calendar"></ion-icon>
+                            <input type="number" id="jour">
+                        </span>
+                    </label>
+                </article>
+                <article>
+                    <label for="transport">
+                        <span>
+                            <p>Transport</p>
+                        </span>
+                        <span id="input-border">
+                            <!-- <ion-icon id="icon" name="logo-model-s"></ion-icon> -->
+                            <!-- <ion-icon id="icon" name="train"></ion-icon> -->
+                            <ion-icon id="icon" name="airplane"></ion-icon>
+                            <select name="transport" id="transport">
+                                <option value="40000">Taxi-brousse</option>
+                                <option value="50000">Avion</option>
+                                <option value="30000">Voiture</option>
+                            </select>
+                        </span>
+
+                    </label>
+                    <label for="transport">
+                        <span>
+                            <p>Hebergement</p>
+                        </span>
+                        <span id="input-border">
+                            <ion-icon id="icon" name="bed" id="icon"></ion-icon>
+                            <select name="hebergement" id="hebergement">
+                                <option value="40000">Hotel</option>
+                                <option value="60000">Campaigne</option>
+                            </select>
+                        </span>
+
+                    </label>
+                </article>
+                <article>
+                    <label for="">
+                        <span>
+                            <p>Estimation repas</p>
+                        </span>
+                        <span id="input-border">
+                            <ion-icon id="icon" name="pizza"></ion-icon>
+                            <input type="number" id="repas">
+                        </span>
+                    </label>
+                    <label for="">
+                        <span>
+                            <p>Estimation gouter (Revy)</p>
+                        </span>
+                        <span id="input-border">
+                            <ion-icon id="icon" name="beer"></ion-icon>
+                            <input type="number" id="repas">
+                        </span>
+                    </label>
+                </article>
+                <article>
+                    <button id="calculer">
+                        <span><ion-icon name="checkmark-circle-outline" id="icon-size"></ion-icon>
+                            <img src="../calculateur/Images/roll.gif" alt="" id="img-size">
+                        </span>
+                        <span>Valider</span>
+                    </button>
+                </article>
+                <!-- RESULTAT -->
+                <article>
+                    <h3 id="resultat"></h3>
+                </article>
+            </fieldset>
         </div>
     </main>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 
 </html>

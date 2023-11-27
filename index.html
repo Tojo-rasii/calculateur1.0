@@ -9,6 +9,48 @@
 </head>
 
 <body>
+    <!-- POP APROPOS -->
+    <div class="pop">
+        <section>
+            <!-- TITLE -->
+            <article>
+                <span><img src="../calculateur/Images/icons8.png" style="border-radius:50%;" alt=""></span>
+                <span>
+                    <h3>Travel calculator</h3>
+                </span>
+            </article>
+            <div>
+                <article>
+                    <ion-icon name="close" id="close"></ion-icon>
+                </article>
+            </div>
+            <!-- DESCRIPTION -->
+            <article>
+                <p id="desc-1" class="content active">Bienvenue sur Travel Calculator, votre compagnon de voyage numérique dédié à rendre
+                    chaque aventure aussi fluide que possible. Notre mission est de simplifier la planification de
+                    voyage en mettant à votre disposition un outil intelligent et intuitif, conçu pour anticiper vos
+                    besoins et vous offrir une expérience sans tracas.</p>
+                <p id="desc-2" class="content">Ce Que Nous Offrons <br>
+                    Estimation Budgétaire Intelligente : Grâce à notre algorithme avancé, Travel Calculator évalue avec précision les coûts potentiels de votre voyage, vous permettant ainsi de planifier en toute confiance et d'éviter les surprises financières.
+                    Gestion des Dépenses : Suivez et gérez vos dépenses en temps réel. Travel Calculator vous aide à rester dans votre budget en fournissant des mises à jour régulières sur vos coûts prévus et réels.
+                </p>
+                <p id="desc-3" class="content">Comment Ça Marche? <br>
+                    Utiliser Travel Calculator est simple. Entrez vos préférences de voyage, votre budget, et laissez notre algorithme faire le reste. Nous mettons l'accent sur la convivialité et la transparence, vous permettant ainsi de prendre des décisions éclairées à chaque étape du processus. <br>
+                    Merci de faire partie de la communauté Travel Calculator. Préparez-vous à explorer le monde sans soucis !
+                </p>
+                <p id="desc-4" class="content">Nous contacter <br>
+                    Notre équipe dévouée est là pour répondre à toutes vos questions et écouter vos commentaires. Chez Travel Calculator, nous croyons en l'amélioration continue, et vos retours sont essentiels pour faire évoluer notre service. <br>
+                    <a href="https://tojo-rasii.github.io/rasii-online/" target="_blank">Tojo-rasii.github.io</a>
+                </p>
+            </article>
+            <div class="pagination-slide" id="pagination-slide">
+                <a href="#" onclick="showContent('desc-1')"><span>1</span></a>
+                <a href="#" onclick="showContent('desc-2')"><span>2</span></a>
+                <a href="#" onclick="showContent('desc-3')"><span>3</span></a>
+                <a href="#" onclick="showContent('desc-4')"><span>4</span></a>
+            </div>
+        </section>
+    </div>
     <main>
         <div>
             <fieldset>
@@ -34,6 +76,8 @@
                     </article>
                 </legend>
                 <hr>
+                <form action="">
+                <!-- Main -->
                 <article>
                     <label for="">
                         <span>
@@ -121,7 +165,7 @@
                         </span>
                         <span id="input-border">
                             <ion-icon id="icon" name="beer"></ion-icon>
-                            <input type="number" id="repas">
+                            <input type="number" id="boissons">
                         </span>
                     </label>
                 </article>
@@ -133,12 +177,13 @@
                         <span>Valider</span>
                     </button>
                 </article>
-                <!-- RESULTAT -->
-                <article>
-                    <h3 id="resultat"></h3>
-                </article>
+            </form>
+                
+                 <!-- RESULTAT -->
+                <section id="resultat"></section>
             </fieldset>
         </div>
+       
     </main>
     <script src="script.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>

@@ -41,6 +41,9 @@ document.getElementById("calculer").addEventListener('click', function () {
             </div>
             `;
         }
+        else if(isNaN){
+            alert("y a rien")
+        }
         else {
             // document.querySelector('h3').style.color = "red";
             // document.getElementById("resultat").innerText += `Bonjour ${name}\n`
@@ -52,7 +55,7 @@ document.getElementById("calculer").addEventListener('click', function () {
             document.getElementById("resultat").innerHTML = `
             <div>
                <h3>Ravi de vous avoir, ${name} !</h3>
-                 <p>En utilisant Travel Calculator, nous avons estimé que votre budget pour le voyage est de ${budget} Ar, pour ${personne} personnes, avec un séjour de ${T3} heures et hébergement dans un(e) ${hebergement}.<br> C'est fantastique !
+                 <p>En utilisant Travel Calculator, nous avons estimé que votre budget pour le voyage est de ${budget} Ar, <br /> pour ${personne} personnes, avec un séjour de ${T3} heures et hébergement dans un(e) ${hebergement}.<br> C'est fantastique !
                  De plus, vous avez choisi ${transport} comme moyen de transport. Nous avons pris en compte une estimation de repas de ${repas} Ar, n'oubliant pas de budget pour les boissons, estimé à ${boissons} Ar. <br>
                  Ainsi, le coût total estimé pour votre voyage est de ${reste} Ar. <br>
                 À vous maintenant de vérifier et d'ajuster les détails selon vos préférences. <br> Merci d'avoir choisi Travel Calculator !</p>
@@ -60,6 +63,8 @@ document.getElementById("calculer").addEventListener('click', function () {
 `;
         }
     },1000)
+
+  
 
    setTimeout(()=>{
      load.style.display = "block";

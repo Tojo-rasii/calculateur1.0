@@ -8,6 +8,7 @@
 
 :root{
     --color1: #9ae700;
+    --color2: #00d0d3;
     --bg1: linear-gradient(90deg, orange, orangered);
 }
 form{
@@ -26,23 +27,24 @@ body{
     transition: 3s ease-in-out;
     letter-spacing: 0.5px;
     font-family: 'Poppins', sans-serif;
+    background-image: url("../calculateur/Images/Fond2.jpg") !important;
     overflow: hidden;
 }
 @keyframes animate {
     0%{
-        background-image: url("../calculateur/Images/Fond2.jpg");
+        background-image: url("../calculateur/Images/Fond2.jpg") !important;
     }
     30%{
-        background-image: url("../calculateur/Images/Fond1.jpg");
+        background-image: url("../calculateur/Images/Fond1.jpg") !important;
     }
     50%{
-        background-image: url("../calculateur/Images/Fond1.jpg");
+        background-image: url("../calculateur/Images/Fond1.jpg") !important;
     }
     80%{
-        background-image: url("../calculateur/Images/Fond2.jpg");
+        background-image: url("../calculateur/Images/Fond2.jpg") !important;
     }
     100%{
-        background-image: url("../calculateur/Images/Fond1.jpg");
+        background-image: url("../calculateur/Images/Fond1.jpg") !important;
     }
 }
 
@@ -141,30 +143,34 @@ input:focus{
     border-left: 2px solid #fff;
     outline: none;
 }
-button{
+figure{
     display: flex;
     flex-direction: row;
     gap: 0.7em;
-    padding: 1.1em;
-    width: 17em;
+    padding: 0.9em;
+    width: 15em;
     border-radius: 0.8em;
     border: 2px solid #fff;
     background: var(--bg1);
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: normal;
     color: white;
     cursor: pointer;
     margin-top: 1em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     justify-content: center;
     cursor: pointer;
     margin-bottom: 2em;
 }
-button:active{
+figure:active{
     transform: scale(0.98);
 }
-button span:nth-child(2){
+figure span:nth-child(2){
     margin-top: 0.5em;
+}
+#calculer span:nth-child(2){
+    margin-top: 0.1em;
+    font-weight: 400;
 }
 select{
     width: 16em;
@@ -175,17 +181,37 @@ select{
     border-left: 2px solid #fff;
     color: #fff;
 }
+option{
+    color: var(--color2);
+    font-size: 1em;
+}
+option:checked{
+    background: var(--color1);
+    color: #fff;
+}
+/* Ajoutez les icônes aux options du menu déroulant */
+option[data-icon="bus"] {
+    background-image: url('../calculateur/icon/tee\ shirt.jpg');
+}
+
+option[data-icon="airplane"] {
+    background-image: url('chemin/vers/votre/icone-avion.png');
+}
+
+option[data-icon="car"] {
+    background-image: url('chemin/vers/votre/icone-voiture.png');
+}
 #icon{
     font-size: 1.4em;
     margin-top: 0.3em;
     margin-left: 0.5em;
 }
 #icon-size{
-    font-size: 1.9em;
+    font-size: 1.7em;
     display: block;
 }
 #img-size{
-   width: 2.1em;
+   width: 1.8em;
    height: auto;
    display: none;
 }
